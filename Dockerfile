@@ -1,8 +1,10 @@
 FROM node:alpine as builder
 
-USER node
- 
 RUN mkdir -p /app
+
+RUN chown node /app
+
+USER node
 
 WORKDIR /app
  
